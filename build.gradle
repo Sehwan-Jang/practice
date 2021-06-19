@@ -19,6 +19,8 @@ dependencies {
 
     // test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'io.rest-assured:rest-assured:3.3.0'
+//    testImplementation 'io.rest-assured:json-path:4.4.0'
 
     // database
     runtimeOnly 'com.h2database:h2'
