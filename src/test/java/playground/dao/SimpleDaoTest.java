@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import playground.domain.Player;
 
@@ -43,5 +42,4 @@ class SimpleDaoTest {
         //then
         assertThat(simpleDao.findAll()).hasSize(3);
     }
-
 }
