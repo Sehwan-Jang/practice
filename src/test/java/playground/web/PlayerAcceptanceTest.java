@@ -13,6 +13,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.annotation.DirtiesContext;
 import playground.dto.IdDto;
 import playground.dto.PlayerRequest;
+import playground.dto.PlayerResponse;
 
 import java.awt.*;
 
@@ -32,7 +33,7 @@ class PlayerAcceptanceTest {
 
     @Test
     void postPlayerUsingRequestBody() {
-        플레이어_등록되어_있음("aaron", 14);
+        플레이어_등록_요청("aaron", 14);
 
         IdDto request = new IdDto(1L);
 
@@ -47,7 +48,7 @@ class PlayerAcceptanceTest {
         assertThat(response.statusCode()).isEqualTo(HttpStatus.OK.value());
     }
 
-    private void 플레이어_등록되어_있음(String name, int backNumber) {
+    private ExtractableResponse<Response> 플레이어_등록_요청 (String name, int backNumber) {
         PlayerRequest request = new PlayerRequest(name, backNumber);
         ExtractableResponse<Response> response = RestAssured
                 .given().log().all()
@@ -59,14 +60,21 @@ class PlayerAcceptanceTest {
                 .extract();
 
         assertThat(response.statusCode()).isEqualTo(HttpStatus.CREATED.value());
+        return response;
+    }
+
+    private PlayerResponse 플레이어_등록됨(String name, int backNumber) {
+        return 플레이어_등록_요청(name, backNumber).as(PlayerResponse.class);
     }
 
     @Test
     void delete() {
+        PlayerResponse playerResponse = 플레이어_등록됨("aaron", 14);
+
         ExtractableResponse<Response> response = RestAssured
                 .given().log().all()
                 .when()
-                .delete("/players/1")
+                .delete("/players/" + playerResponse.getId())
                 .then().log().all()
                 .extract();
         assertThat(response.statusCode()).isEqualTo(HttpStatus.NO_CONTENT.value());

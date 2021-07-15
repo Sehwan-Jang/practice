@@ -5,8 +5,11 @@ import playground.domain.Player;
 public class PlayerResponse {
 
     private Long id;
-    private final String name;
-    private final int backNumber;
+    private String name;
+    private int backNumber;
+
+    public PlayerResponse() {
+    }
 
     public PlayerResponse(String name, int backNumber) {
         this.name = name;

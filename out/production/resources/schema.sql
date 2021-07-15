@@ -6,5 +6,3 @@ create table PLAYERS
     back_number int          not null,
     primary key (id)
 );
-
-insert into PLAYERS (name, back_number) values('aaron', 14);

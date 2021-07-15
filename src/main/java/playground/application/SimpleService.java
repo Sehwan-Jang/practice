@@ -20,10 +20,11 @@ public class SimpleService {
     }
 
     @Transactional
-    public Long addPlayer(PlayerRequest playerRequest) {
+    public PlayerResponse addPlayer(PlayerRequest playerRequest) {
 //        Player player = new Player(playerRequest.getName(), playerRequest.getBackNumber());
         Player player = playerRequest.toEntity();
-        return simpleDao.save(player);
+        Long id = simpleDao.save(player);
+        return new PlayerResponse(id, player.getName(), player.getBackNumber());
     }
 
     public PlayerResponse getPlayer(Long id) {
@@ -37,7 +38,7 @@ public class SimpleService {
                 .collect(Collectors.toList());
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public void deleteById(Long id) {
         this.simpleDao.deleteById(id);
     }

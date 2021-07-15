@@ -23,10 +23,10 @@ public class SimpleController {
     }
 
     @PostMapping("/players")
-    public ResponseEntity<Void> addPlayer(@RequestBody PlayerRequest playerRequest) {
+    public ResponseEntity<PlayerResponse> addPlayer(@RequestBody PlayerRequest playerRequest) {
 //        logger.debug("added Player {}!!", playerRequest.getName());
-        Long id = this.service.addPlayer(playerRequest);
-        return ResponseEntity.created(URI.create("/players/" + id)).build();
+        PlayerResponse playerResponse = this.service.addPlayer(playerRequest);
+        return ResponseEntity.created(URI.create("/players/" + playerResponse.getId())).body(playerResponse);
     }
 
     @GetMapping("/players/{id}")
