@@ -1,0 +1,47 @@
+2021-06-20 17:31:54.537 main INFO  playground.PlaygroundApplication - Starting PlaygroundApplication on jangsehwan-ui-MacBookPro.local with PID 2273 (/Users/jjangse/Desktop/aaron_source/woowa_course/playground/build/classes/java/main started by jjangse in /Users/jjangse/Desktop/aaron_source/woowa_course/playground)
+2021-06-20 17:31:54.538 main INFO  playground.PlaygroundApplication - No active profile set, falling back to default profiles: default
+2021-06-20 17:31:55.147 main INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-06-20 17:31:55.153 main INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-06-20 17:31:55.153 main INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-06-20 17:31:55.153 main INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-06-20 17:31:55.200 main INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-06-20 17:31:55.200 main INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 639 ms
+2021-06-20 17:31:55.225 main INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-06-20 17:31:55.299 main INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-06-20 17:31:55.318 main INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-06-20 17:31:55.343 main INFO  net.rakugakibox.spring.boot.logback.access.LogbackAccessContext - Configured the Logback-access: context=[default], config=[classpath:net/rakugakibox/spring/boot/logback/access/logback-access-spring.xml]
+2021-06-20 17:31:55.469 main INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-20 17:31:55.559 main INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-06-20 17:31:55.578 main INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-20 17:31:55.581 main INFO  playground.PlaygroundApplication - Started PlaygroundApplication in 1.234 seconds (JVM running for 2.122)
+2021-06-20 17:32:03.705 http-nio-8080-exec-2 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-20 17:32:03.706 http-nio-8080-exec-2 INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-06-20 17:32:03.710 http-nio-8080-exec-2 INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2021-06-20 17:32:03.767 http-nio-8080-exec-2 ERROR playground.web.SimpleControllerAdvice - cause is : 이름은 5자를 넘을 수 없습니다.
+2021-06-20 17:33:18.921 http-nio-8080-exec-5 ERROR playground.web.SimpleControllerAdvice - cause is : 이름은 5자를 넘을 수 없습니다.
+2021-06-20 17:39:05.803 SpringContextShutdownHook INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-20 17:39:05.805 SpringContextShutdownHook INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-06-20 17:39:05.808 SpringContextShutdownHook INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-06-20 19:38:29.148 main INFO  playground.PlaygroundApplication - Starting PlaygroundApplication on jangsehwan-ui-MacBookPro.local with PID 2732 (/Users/jjangse/Desktop/aaron_source/woowa_course/playground/build/classes/java/main started by jjangse in /Users/jjangse/Desktop/aaron_source/woowa_course/playground)
+2021-06-20 19:38:29.150 main INFO  playground.PlaygroundApplication - No active profile set, falling back to default profiles: default
+2021-06-20 19:38:29.870 main INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-06-20 19:38:29.877 main INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-06-20 19:38:29.878 main INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-06-20 19:38:29.878 main INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-06-20 19:38:29.932 main INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-06-20 19:38:29.932 main INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 752 ms
+2021-06-20 19:38:29.965 main INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-06-20 19:38:30.067 main INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-06-20 19:38:30.094 main INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-06-20 19:38:30.124 main INFO  net.rakugakibox.spring.boot.logback.access.LogbackAccessContext - Configured the Logback-access: context=[default], config=[classpath:net/rakugakibox/spring/boot/logback/access/logback-access-spring.xml]
+2021-06-20 19:38:30.302 main INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-20 19:38:30.443 main INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-06-20 19:38:30.464 main INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-20 19:38:30.467 main INFO  playground.PlaygroundApplication - Started PlaygroundApplication in 1.525 seconds (JVM running for 2.075)
+2021-06-20 19:39:09.895 http-nio-8080-exec-2 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-20 19:39:09.896 http-nio-8080-exec-2 INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-06-20 19:39:09.903 http-nio-8080-exec-2 INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2021-06-20 19:39:09.977 http-nio-8080-exec-2 ERROR playground.web.SimpleControllerAdvice - cause is : 이름은 5자를 넘을 수 없습니다.
+2021-06-20 19:39:20.966 SpringContextShutdownHook INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-20 19:39:20.967 SpringContextShutdownHook INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-06-20 19:39:20.970 SpringContextShutdownHook INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
