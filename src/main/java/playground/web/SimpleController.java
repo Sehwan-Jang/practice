@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import playground.application.SimpleService;
-import playground.dto.ErrorDto;
+import playground.dto.IdDto;
 import playground.dto.PlayerRequest;
 import playground.dto.PlayerResponse;
 
@@ -24,7 +24,7 @@ public class SimpleController {
 
     @PostMapping("/players")
     public ResponseEntity<Void> addPlayer(@RequestBody PlayerRequest playerRequest) {
-        logger.debug("added Player {}!!", playerRequest.getName());
+//        logger.debug("added Player {}!!", playerRequest.getName());
         Long id = this.service.addPlayer(playerRequest);
         return ResponseEntity.created(URI.create("/players/" + id)).build();
     }
@@ -35,10 +35,25 @@ public class SimpleController {
         return ResponseEntity.ok(player);
     }
 
+    @GetMapping("/players-get")
+    public ResponseEntity<PlayerResponse> getPlayer2(IdDto id) {
+        System.out.println(id.getId().toString());
+        logger.info("id : {}", id.getId().toString());
+        PlayerResponse player = this.service.getPlayer(id.getId());
+//        PlayerResponse player = this.service.getPlayer(id);
+        return ResponseEntity.ok(player);
+    }
+
     @GetMapping("/players")
     public ResponseEntity<List<PlayerResponse>> getPlayers() {
 
         List<PlayerResponse> players = this.service.getAllPlayers();
         return ResponseEntity.ok(players);
+    }
+
+    @DeleteMapping("/players/{id}")
+    public ResponseEntity<Void> deletePlayer(@PathVariable Long id) {
+        this.service.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 }

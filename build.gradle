@@ -24,6 +24,7 @@ dependencies {
 //    testImplementation 'io.rest-assured:json-path:4.4.0'
 
     // database
+    runtimeOnly 'mysql:mysql-connector-java'
     runtimeOnly 'com.h2database:h2'
 }
 

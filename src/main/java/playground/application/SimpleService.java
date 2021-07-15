@@ -21,7 +21,8 @@ public class SimpleService {
 
     @Transactional
     public Long addPlayer(PlayerRequest playerRequest) {
-        Player player = new Player(playerRequest.getName(), playerRequest.getBackNumber());
+//        Player player = new Player(playerRequest.getName(), playerRequest.getBackNumber());
+        Player player = playerRequest.toEntity();
         return simpleDao.save(player);
     }
 
@@ -34,5 +35,10 @@ public class SimpleService {
         return players.stream()
                 .map(PlayerResponse::of)
                 .collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public void deleteById(Long id) {
+        this.simpleDao.deleteById(id);
     }
 }

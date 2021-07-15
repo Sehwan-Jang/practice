@@ -1,4 +1,4 @@
-drop table PLAYERS if exists;
+drop table if exists PLAYERS;
 create table PLAYERS
 (
     id          bigint auto_increment not null,
@@ -6,3 +6,5 @@ create table PLAYERS
     back_number int          not null,
     primary key (id)
 );
+
+insert into PLAYERS (name, back_number) values('aaron', 14);
