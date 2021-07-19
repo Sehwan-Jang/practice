@@ -36,4 +36,3 @@ jobs:
           source: "/home/ubuntu/actions-runner/practice/practice/practice"
           target: "/home/ubuntu"
           strip_components: 1
-          rm: true
