@@ -22,3 +22,11 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew build
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.EC2_HOST_KEY }}
+          source: "/home/ubuntu/actions-runner/practice/practice/practice"
+          target: "/home/ubuntu"
