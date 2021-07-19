@@ -47,7 +47,7 @@ class PlayerAcceptanceTest {
                 .then().log().all()
                 .extract();
 
-        assertThat(response.statusCode()).isEqualTo(HttpStatus.OK.value());
+        assertThat(response.statusCode()).isEqualTo(HttpStatus.BAD_REQUEST.value());
     }
 
     private ExtractableResponse<Response> 플레이어_등록_요청 (String name, int backNumber) {
