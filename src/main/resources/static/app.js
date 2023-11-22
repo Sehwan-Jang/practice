@@ -21,6 +21,16 @@ function connect() {
     stompClient.subscribe('/topic/greetings', function (greeting) {
       showGreeting(JSON.parse(greeting.body).content);
     });
+    console.log("id is : " + $("#id"));
+    if ($("#id").val() == "admin") {
+      stompClient.subscribe('/topic/admin', function (admin) {
+        showAdmin(JSON.parse(admin.body).content);
+      });
+    } else if ($("#id").val() == "dev") {
+      stompClient.subscribe('/topic/dev', function (dev) {
+        showDev(dev.body);
+      });
+    }
   });
 }
 
@@ -34,10 +44,21 @@ function disconnect() {
 
 function sendName() {
   stompClient.send("/app/hello", {}, JSON.stringify({'name': $("#name").val()}));
+  if ($("#name").val() == "black") {
+    stompClient.send("/app/black", {}, JSON.stringify({'name': $("#name").val()}));
+  }
 }
 
 function showGreeting(message) {
   $("#greetings").append("<tr><td>" + message + "</td></tr>");
+}
+
+function showAdmin(message) {
+  $("#admin").append("<tr><td>" + message + "</td></tr>");
+}
+
+function showDev(message) {
+  $("#dev").append("<tr><td>" + message + "</td></tr>");
 }
 
 $(function () {
